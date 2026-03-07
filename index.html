@@ -1,65 +1,154 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
 
 <meta charset="UTF-8">
-<title>Taxi Lille 24 | Taxi Métropole de Lille 24h/24</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Taxi Lille 24 disponible 24h/24 dans la métropole de Lille. Transferts gares Lille Flandres, Lille Europe et aéroport Lille Lesquin. Appelez le 07 73 68 45 88.">
+<title>Taxi Lille 24 | Taxi 24h/24 Lille</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Taxi Lille 24 disponible 24h/24. Transferts Gare Lille Flandres, Lille Europe et Aéroport Lille Lesquin. Réservation rapide.">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
 
 body{
-font-family:Arial;
 margin:0;
-background:#f4f4f4;
+font-family:Montserrat;
+background:#f5f5f5;
+color:#222;
 }
 
 header{
-background:#000;
+background:black;
 color:white;
-padding:40px;
-text-align:center;
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
 header h1{
 margin:0;
-font-size:40px;
+font-size:22px;
 }
 
-.cta{
-background:#ffd000;
+.hero{
+height:500px;
+background:url("https://images.unsplash.com/photo-1508057198894-247b23fe5ade") center/cover;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+color:white;
 text-align:center;
-padding:25px;
-font-size:26px;
+padding:20px;
 }
 
-.cta a{
-color:black;
+.hero h2{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:20px;
+}
+
+.buttons a{
 text-decoration:none;
+padding:15px 25px;
+margin:10px;
+border-radius:6px;
 font-weight:bold;
 }
 
-section{
-max-width:1100px;
-margin:auto;
-padding:40px;
+.call{
+background:#ffd000;
+color:black;
 }
 
-.service{
+.book{
 background:white;
-padding:25px;
-margin-bottom:20px;
-border-radius:8px;
+color:black;
+}
+
+section{
+padding:60px 20px;
+max-width:1100px;
+margin:auto;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.places{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.place img{
+width:100%;
+border-radius:10px;
+}
+
+form{
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+input,textarea{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+button{
+background:#ffd000;
+border:none;
+padding:15px;
+font-weight:bold;
+width:100%;
+border-radius:6px;
+cursor:pointer;
 }
 
 footer{
-background:#000;
+background:black;
 color:white;
 text-align:center;
-padding:25px;
+padding:30px;
+margin-top:40px;
+}
+
+.callbutton{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#ffd000;
+color:black;
+padding:15px 20px;
+border-radius:50px;
+font-weight:bold;
+text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
 }
 
 </style>
@@ -69,83 +158,117 @@ padding:25px;
 <body>
 
 <header>
+
 <h1>Taxi Lille 24</h1>
-<p>Taxi disponible 24h/24 dans toute la métropole de Lille</p>
+
+<a href="tel:+33773684588" style="color:white;text-decoration:none;">📞 07 73 68 45 88</a>
+
 </header>
 
-<div class="cta">
-📞 <a href="tel:+33773684588">Appeler maintenant : 07 73 68 45 88</a>
+<div class="hero">
+
+<h2>Taxi Lille 24</h2>
+
+<p>Taxi disponible 24h/24 dans toute la métropole de Lille</p>
+
+<div class="buttons">
+
+<a class="call" href="tel:+33773684588">📞 Appeler maintenant</a>
+
+<a class="book" href="#reservation">🚖 Réserver un taxi</a>
+
+</div>
+
 </div>
 
 <section>
 
-<h2>Taxi à Lille 24h/24</h2>
+<h2>Nos Services</h2>
 
-<p>
-Taxi Lille 24 est votre chauffeur disponible à toute heure dans la métropole lilloise. 
-Service rapide, confortable et professionnel pour tous vos déplacements.
-</p>
+<div class="services">
 
-<div class="service">
-<h2>Taxi Gare Lille</h2>
-<p>
-Transferts rapides vers la gare Lille Flandres et Lille Europe.
-</p>
+<div class="card">
+<h3>🚖 Taxi Gare Lille</h3>
+<p>Transfert rapide vers Gare Lille Flandres et Lille Europe.</p>
 </div>
 
-<div class="service">
-<h2>Taxi Aéroport Lille Lesquin</h2>
-<p>
-Transport vers l'aéroport de Lille Lesquin pour vos voyages professionnels ou personnels.
-</p>
+<div class="card">
+<h3>✈️ Taxi Aéroport Lille Lesquin</h3>
+<p>Transport vers l'aéroport pour tous vos voyages.</p>
 </div>
 
-<div class="service">
-<h2>Taxi longue distance</h2>
-<p>
-Nous assurons également les trajets longue distance dans toute la région et vers la Belgique.
-</p>
+<div class="card">
+<h3>🌍 Longue distance</h3>
+<p>Trajets vers Paris, Bruxelles et toute la région.</p>
 </div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Taxi dans les lieux populaires de Lille</h2>
+
+<div class="places">
+
+<div class="place">
+<img src="https://images.unsplash.com/photo-1602002418816-5c0aeef426aa">
+<h3>Taxi Grand Place Lille</h3>
+</div>
+
+<div class="place">
+<img src="https://images.unsplash.com/photo-1602002418772-dc7f4d2f8e85">
+<h3>Taxi Vieux Lille</h3>
+</div>
+
+<div class="place">
+<img src="https://images.unsplash.com/photo-1580674684081-7617fbf3d745">
+<h3>Taxi Gare Lille Europe</h3>
+</div>
+
+</div>
+
+</section>
+
+<section id="reservation">
+
+<h2>Réservation / Devis</h2>
+
+<form action="https://formspree.io/f/xxxxabcd" method="POST">
+
+<input type="text" name="nom" placeholder="Nom" required>
+
+<input type="tel" name="telephone" placeholder="Téléphone" required>
+
+<input type="text" name="depart" placeholder="Adresse de départ">
+
+<input type="text" name="destination" placeholder="Destination">
+
+<input type="date" name="date">
+
+<input type="time" name="heure">
+
+<textarea name="message" placeholder="Message"></textarea>
+
+<button type="submit">Envoyer la demande</button>
+
+</form>
 
 </section>
 
 <footer>
 
 <p>Taxi Lille 24</p>
-<p>Téléphone : 07 73 68 45 88</p>
+
+<p>📞 07 73 68 45 88</p>
+
+<p>Taxi disponible 24h/24 dans la métropole de Lille</p>
 
 </footer>
+
+<a class="callbutton" href="tel:+33773684588">📞 Appeler</a>
 
 </body>
 
 </html>
-<section>
-<h2>Réservation / Demande de devis</h2>
-
-<form action="https://formspree.io/f/xnjgndlj" method="POST">
-
-<label>Nom</label><br>
-<input type="text" name="nom" required><br><br>
-
-<label>Téléphone</label><br>
-<input type="tel" name="telephone" required><br><br>
-
-<label>Adresse de départ</label><br>
-<input type="text" name="depart" required><br><br>
-
-<label>Destination</label><br>
-<input type="text" name="destination" required><br><br>
-
-<label>Date</label><br>
-<input type="date" name="date"><br><br>
-
-<label>Heure</label><br>
-<input type="time" name="heure"><br><br>
-
-<label>Message</label><br>
-<textarea name="message"></textarea><br><br>
-
-<button type="submit">Envoyer la demande</button>
-
-</form>
-</section>
