@@ -15,29 +15,32 @@ header{display:flex;justify-content:space-between;align-items:center;padding:15p
 header h1{font-size:24px;}
 header a{font-weight:700;}
 .hero{height:80vh;background:url('https://images.unsplash.com/photo-1517544122544-7fa0a1d6e0b7?crop=entropy&fit=crop&w=1200&q=80') center/cover no-repeat;display:flex;justify-content:center;align-items:center;text-align:center;color:#fff;position:relative;}
-.hero::after{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);}
+.hero::after{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.55);}
 .hero-content{position:relative;z-index:1;padding:20px;}
-.hero h2{font-size:36px;font-weight:700;margin-bottom:10px;}
-.hero p{font-size:18px;margin-bottom:15px;}
+.hero h2{font-size:36px;font-weight:700;margin-bottom:10px;text-shadow:2px 2px 6px rgba(0,0,0,0.6);}
+.hero p{font-size:18px;margin-bottom:15px;text-shadow:1px 1px 4px rgba(0,0,0,0.6);}
 .hero-buttons a{display:inline-block;margin:5px;padding:12px 25px;border-radius:6px;font-weight:700;transition:0.3s;}
-.call-btn{background:#ffd700;color:#111;}
-.call-btn:hover{background:#e6c000;}
-.book-btn{background:#fff;color:#111;}
-.book-btn:hover{background:#eee;}
+.call-btn{background:#ffd700;color:#111;box-shadow:0 4px 8px rgba(0,0,0,0.2);}
+.call-btn:hover{background:#e6c000;transform:translateY(-2px);}
+.book-btn{background:#111;color:#ffd700;box-shadow:0 4px 8px rgba(0,0,0,0.2);}
+.book-btn:hover{background:#222;color:#fff;transform:translateY(-2px);}
 section{padding:50px 15px;max-width:1000px;margin:auto;}
-h2{font-size:28px;text-align:center;margin-bottom:30px;}
+h2{font-size:28px;text-align:center;margin-bottom:30px;color:#111;}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
-.card{background:#fff;border-radius:10px;padding:15px;text-align:center;transition:0.2s;}
-.card img{width:100%;border-radius:8px;height:150px;object-fit:cover;}
-.card h3{margin:10px 0 5px;font-size:18px;}
-.card p{font-size:14px;margin-bottom:5px;}
-form{background:#fff;padding:25px;border-radius:10px;}
+.card{background:#fff;border-radius:10px;padding:15px;text-align:center;transition:0.3s;box-shadow:0 4px 12px rgba(0,0,0,0.1);}
+.card:hover{transform:translateY(-5px) scale(1.02);box-shadow:0 10px 20px rgba(0,0,0,0.2);}
+.card img{width:100%;border-radius:8px;height:150px;object-fit:cover;transition:0.3s;}
+.card img:hover{transform:scale(1.05);}
+.card h3{margin:10px 0 5px;font-size:18px;color:#111;}
+.card p{font-size:14px;margin-bottom:5px;color:#555;}
+form{background:#fff;padding:25px;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.1);}
 input,textarea,button{width:100%;padding:10px;margin-bottom:10px;border-radius:6px;border:1px solid #ccc;font-size:14px;}
-button{background:#ffd700;border:none;font-weight:700;cursor:pointer;}
-button:hover{background:#e6c000;}
+input:focus,textarea:focus{border-color:#ffd700;outline:none;}
+button{background:#ffd700;border:none;font-weight:700;cursor:pointer;transition:0.3s;}
+button:hover{background:#e6c000;transform:translateY(-2px);}
 footer{text-align:center;padding:25px;background:#111;color:#fff;font-size:14px;}
-.call-float{position:fixed;bottom:15px;right:15px;background:#ffd700;color:#111;padding:12px 18px;border-radius:50px;font-weight:700;}
-.call-float:hover{background:#e6c000;}
+.call-float{position:fixed;bottom:15px;right:15px;background:#ffd700;color:#111;padding:12px 18px;border-radius:50px;font-weight:700;box-shadow:0 4px 10px rgba(0,0,0,0.3);}
+.call-float:hover{background:#e6c000;transform:translateY(-2px);}
 @media(max-width:768px){.hero h2{font-size:28px;}.hero p{font-size:16px;}}
 </style>
 </head>
@@ -68,61 +71,18 @@ footer{text-align:center;padding:25px;background:#111;color:#fff;font-size:14px;
 </div>
 </section>
 
-<!-- Villes -->
 <section>
-<h2>Taxi à Roubaix</h2>
-<img src="https://images.unsplash.com/photo-1562145071-90fda49c3b79?crop=entropy&fit=crop&w=800&q=80" alt="Taxi Roubaix" style="width:100%;border-radius:8px;margin-bottom:15px;" loading="lazy">
-<p>Service 24h/24 à Roubaix.</p>
-<a class="book-btn" href="#reservation">🚖 Réserver à Roubaix</a>
-</section>
-
-<section>
-<h2>Taxi à Tourcoing</h2>
-<img src="https://images.unsplash.com/photo-1560393464-5d16904ec738?crop=entropy&fit=crop&w=800&q=80" alt="Taxi Tourcoing" style="width:100%;border-radius:8px;margin-bottom:15px;" loading="lazy">
-<p>Service rapide à Tourcoing.</p>
-<a class="book-btn" href="#reservation">🚖 Réserver à Tourcoing</a>
-</section>
-
-<section>
-<h2>Taxi à Villeneuve-d'Ascq</h2>
-<img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?crop=entropy&fit=crop&w=800&q=80" alt="Taxi Villeneuve-d'Ascq" style="width:100%;border-radius:8px;margin-bottom:15px;" loading="lazy">
-<p>Déplacements rapides à Villeneuve-d'Ascq 24h/24.</p>
-<a class="book-btn" href="#reservation">🚖 Réserver</a>
-</section>
-
-<section>
-<h2>Taxi à Marcq-en-Barœul</h2>
-<img src="https://images.unsplash.com/photo-1606813909869-8946c3f0aa8d?crop=entropy&fit=crop&w=800&q=80" alt="Taxi Marcq-en-Barœul" style="width:100%;border-radius:8px;margin-bottom:15px;" loading="lazy">
-<p>Service taxi à Marcq-en-Barœul.</p>
-<a class="book-btn" href="#reservation">🚖 Réserver</a>
-</section>
-
-<section>
-<h2>Taxi à Wasquehal</h2>
-<img src="https://images.unsplash.com/photo-1568032641-61f5b7d2c839?crop=entropy&fit=crop&w=800&q=80" alt="Taxi Wasquehal" style="width:100%;border-radius:8px;margin-bottom:15px;" loading="lazy">
-<p>Service taxi à Wasquehal 24h/24.</p>
-<a class="book-btn" href="#reservation">🚖 Réserver</a>
-</section>
-
-<section>
-<h2>Taxi à La Madeleine</h2>
-<img src="https://images.unsplash.com/photo-1597000006198-89b3e3f7a2d1?crop=entropy&fit=crop&w=800&q=80" alt="Taxi La Madeleine" style="width:100%;border-radius:8px;margin-bottom:15px;" loading="lazy">
-<p>Service rapide à La Madeleine.</p>
-<a class="book-btn" href="#reservation">🚖 Réserver</a>
-</section>
-
-<section>
-<h2>Taxi à Lambersart</h2>
-<img src="https://images.unsplash.com/photo-1581091215368-b74c2bcd56cd?crop=entropy&fit=crop&w=800&q=80" alt="Taxi Lambersart" style="width:100%;border-radius:8px;margin-bottom:15px;" loading="lazy">
-<p>Service sécurisé à Lambersart 24h/24.</p>
-<a class="book-btn" href="#reservation">🚖 Réserver</a>
-</section>
-
-<section>
-<h2>Taxi à Bondues</h2>
-<img src="https://images.unsplash.com/photo-1579940809337-fc67e8c2bcd3?crop=entropy&fit=crop&w=800&q=80" alt="Taxi Bondues" style="width:100%;border-radius:8px;margin-bottom:15px;" loading="lazy">
-<p>Service fiable à Bondues 24h/24.</p>
-<a class="book-btn" href="#reservation">🚖 Réserver</a>
+<h2>Nos villes desservies</h2>
+<div class="grid">
+<div class="card"><img src="https://images.unsplash.com/photo-1562145071-90fda49c3b79?crop=entropy&fit=crop&w=800&q=80" alt="Roubaix" loading="lazy"><h3>Roubaix</h3><p>Trajets rapides et confortables.</p></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1560393464-5d16904ec738?crop=entropy&fit=crop&w=800&q=80" alt="Tourcoing" loading="lazy"><h3>Tourcoing</h3><p>Service fiable 24h/24.</p></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?crop=entropy&fit=crop&w=800&q=80" alt="Villeneuve-d'Ascq" loading="lazy"><h3>Villeneuve-d'Ascq</h3><p>Déplacements rapides et sécurisés.</p></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1606813909869-8946c3f0aa8d?crop=entropy&fit=crop&w=800&q=80" alt="Marcq-en-Barœul" loading="lazy"><h3>Marcq-en-Barœul</h3><p>Chauffeurs professionnels.</p></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1568032641-61f5b7d2c839?crop=entropy&fit=crop&w=800&q=80" alt="Wasquehal" loading="lazy"><h3>Wasquehal</h3><p>Disponible 24h/24.</p></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1597000006198-89b3e3f7a2d1?crop=entropy&fit=crop&w=800&q=80" alt="La Madeleine" loading="lazy"><h3>La Madeleine</h3><p>Service rapide et fiable.</p></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1581091215368-b74c2bcd56cd?crop=entropy&fit=crop&w=800&q=80" alt="Lambersart" loading="lazy"><h3>Lambersart</h3><p>Trajets sécurisés 24h/24.</p></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1579940809337-fc67e8c2bcd3?crop=entropy&fit=crop&w=800&q=80" alt="Bondues" loading="lazy"><h3>Bondues</h3><p>Service fiable 24h/24.</p></div>
+</div>
 </section>
 
 <section id="reservation">
@@ -132,8 +92,10 @@ footer{text-align:center;padding:25px;background:#111;color:#fff;font-size:14px;
 <input type="tel" placeholder="Téléphone" required>
 <input type="text" placeholder="Adresse départ" required>
 <input type="text" placeholder="Destination" required>
+<input type="datetime-local" placeholder="Date & Heure" required>
+<input type="number" placeholder="Nombre de passagers" min="1" max="8" required>
 <textarea placeholder="Message"></textarea>
-<button>Envoyer</button>
+<button>Envoyer la réservation</button>
 </form>
 </section>
 
