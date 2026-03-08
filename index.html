@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',sans-serif;}
-body{background:#f5f5f5;color:#111;line-height:1.6;scroll-behavior:smooth;}
+body{line-height:1.6;scroll-behavior:smooth;background:linear-gradient(160deg,#fff200,#ffea70);color:#111;}
 a{text-decoration:none;color:inherit;}
 header{display:flex;justify-content:space-between;align-items:center;padding:15px 20px;background:#111;color:#ffd700;position:sticky;top:0;z-index:999;}
 header h1{font-size:24px;}
@@ -24,12 +24,14 @@ header a{font-weight:700;}
 .call-btn:hover{background:#e6c000;transform:translateY(-2px);}
 .book-btn{background:#111;color:#ffd700;box-shadow:0 4px 8px rgba(0,0,0,0.2);}
 .book-btn:hover{background:#222;color:#fff;transform:translateY(-2px);}
-section{padding:50px 15px;max-width:1000px;margin:auto;}
+section{padding:50px 15px;max-width:1000px;margin:auto;opacity:0;transform:scale(0.95);transition:all 0.6s ease-out;}
+section.visible{opacity:1;transform:scale(1);}
 h2{font-size:28px;text-align:center;margin-bottom:30px;color:#111;}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
-.card{background:#fff;border-radius:10px;padding:15px;text-align:center;transition:0.3s;box-shadow:0 4px 12px rgba(0,0,0,0.1);}
+.card{background:#fff;border-radius:10px;padding:15px;text-align:center;transition:0.3s;box-shadow:0 4px 12px rgba(0,0,0,0.1);opacity:0;transform:scale(0.95);}
+.card.visible{opacity:1;transform:scale(1);}
 .card:hover{transform:translateY(-5px) scale(1.02);box-shadow:0 10px 20px rgba(0,0,0,0.2);}
-.card img{width:100%;border-radius:8px;height:150px;object-fit:cover;transition:0.3s;}
+.card img{width:100%;height:180px;object-fit:cover;border-radius:8px;transition:0.3s;display:block;margin-bottom:10px;}
 .card img:hover{transform:scale(1.05);}
 .card h3{margin:10px 0 5px;font-size:18px;color:#111;}
 .card p{font-size:14px;margin-bottom:5px;color:#555;}
@@ -41,7 +43,12 @@ button:hover{background:#e6c000;transform:translateY(-2px);}
 footer{text-align:center;padding:25px;background:#111;color:#fff;font-size:14px;}
 .call-float{position:fixed;bottom:15px;right:15px;background:#ffd700;color:#111;padding:12px 18px;border-radius:50px;font-weight:700;box-shadow:0 4px 10px rgba(0,0,0,0.3);}
 .call-float:hover{background:#e6c000;transform:translateY(-2px);}
-@media(max-width:768px){.hero h2{font-size:28px;}.hero p{font-size:16px;}}
+@media(max-width:768px){.hero h2{font-size:28px;}.hero p{font-size:16px;}.card img{height:150px;}}
+
+/* Slider */
+.slider-container{position:relative;overflow:hidden;}
+.slider-track{display:flex;transition:transform 0.5s ease-in-out;}
+.slider-track .card{min-width:100%;margin:0;}
 </style>
 </head>
 <body>
@@ -62,30 +69,32 @@ footer{text-align:center;padding:25px;background:#111;color:#fff;font-size:14px;
 </div>
 </div>
 
-<section>
+<section class="section">
 <h2>Services principaux</h2>
-<div class="grid">
-<div class="card"><img src="https://images.unsplash.com/photo-1603052875242-2e64a3bb7b3f?crop=entropy&fit=crop&w=600&q=80" alt="Taxi Gare Lille Flandres" loading="lazy"><h3>Lille Flandres</h3><p>Transfert rapide vers la gare.</p></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1595003437243-d093fa2f91df?crop=entropy&fit=crop&w=600&q=80" alt="Taxi Gare Lille Europe" loading="lazy"><h3>Lille Europe</h3><p>Service vers la gare Lille Europe.</p></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1581090700227-8eec8a3c7b3e?crop=entropy&fit=crop&w=600&q=80" alt="Taxi Aéroport Lille Lesquin" loading="lazy"><h3>Aéroport Lesquin</h3><p>Transfert 24h/24 vers l'aéroport.</p></div>
+<div class="slider-container">
+<div class="slider-track">
+<div class="card"><img src="https://images.pexels.com/photos/380727/pexels-photo-380727.jpeg" alt="Taxi Gare Lille Flandres" loading="lazy"><h3>Lille Flandres</h3><p>Transfert rapide vers la gare.</p></div>
+<div class="card"><img src="https://images.pexels.com/photos/323776/pexels-photo-323776.jpeg" alt="Taxi Gare Lille Europe" loading="lazy"><h3>Lille Europe</h3><p>Service vers la gare Lille Europe.</p></div>
+<div class="card"><img src="https://images.pexels.com/photos/21014/pexels-photo.jpg" alt="Taxi Aéroport Lille Lesquin" loading="lazy"><h3>Aéroport Lesquin</h3><p>Transfert 24h/24 vers l'aéroport.</p></div>
+</div>
 </div>
 </section>
 
-<section>
+<section class="section">
 <h2>Nos villes desservies</h2>
 <div class="grid">
-<div class="card"><img src="https://images.unsplash.com/photo-1562145071-90fda49c3b79?crop=entropy&fit=crop&w=800&q=80" alt="Roubaix" loading="lazy"><h3>Roubaix</h3><p>Trajets rapides et confortables.</p></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1560393464-5d16904ec738?crop=entropy&fit=crop&w=800&q=80" alt="Tourcoing" loading="lazy"><h3>Tourcoing</h3><p>Service fiable 24h/24.</p></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?crop=entropy&fit=crop&w=800&q=80" alt="Villeneuve-d'Ascq" loading="lazy"><h3>Villeneuve-d'Ascq</h3><p>Déplacements rapides et sécurisés.</p></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1606813909869-8946c3f0aa8d?crop=entropy&fit=crop&w=800&q=80" alt="Marcq-en-Barœul" loading="lazy"><h3>Marcq-en-Barœul</h3><p>Chauffeurs professionnels.</p></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1568032641-61f5b7d2c839?crop=entropy&fit=crop&w=800&q=80" alt="Wasquehal" loading="lazy"><h3>Wasquehal</h3><p>Disponible 24h/24.</p></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1597000006198-89b3e3f7a2d1?crop=entropy&fit=crop&w=800&q=80" alt="La Madeleine" loading="lazy"><h3>La Madeleine</h3><p>Service rapide et fiable.</p></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1581091215368-b74c2bcd56cd?crop=entropy&fit=crop&w=800&q=80" alt="Lambersart" loading="lazy"><h3>Lambersart</h3><p>Trajets sécurisés 24h/24.</p></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1579940809337-fc67e8c2bcd3?crop=entropy&fit=crop&w=800&q=80" alt="Bondues" loading="lazy"><h3>Bondues</h3><p>Service fiable 24h/24.</p></div>
+<div class="card"><img src="https://images.pexels.com/photos/1704126/pexels-photo-1704126.jpeg" alt="Roubaix" loading="lazy"><h3>Roubaix</h3><p>Trajets rapides et confortables.</p></div>
+<div class="card"><img src="https://images.pexels.com/photos/1646347/pexels-photo-1646347.jpeg" alt="Tourcoing" loading="lazy"><h3>Tourcoing</h3><p>Service fiable 24h/24.</p></div>
+<div class="card"><img src="https://images.pexels.com/photos/373965/pexels-photo-373965.jpeg" alt="Villeneuve-d'Ascq" loading="lazy"><h3>Villeneuve-d'Ascq</h3><p>Déplacements rapides et sécurisés.</p></div>
+<div class="card"><img src="https://images.pexels.com/photos/21013/pexels-photo.jpg" alt="Marcq-en-Barœul" loading="lazy"><h3>Marcq-en-Barœul</h3><p>Chauffeurs professionnels.</p></div>
+<div class="card"><img src="https://images.pexels.com/photos/279018/pexels-photo-279018.jpeg" alt="Wasquehal" loading="lazy"><h3>Wasquehal</h3><p>Disponible 24h/24.</p></div>
+<div class="card"><img src="https://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg" alt="La Madeleine" loading="lazy"><h3>La Madeleine</h3><p>Service rapide et fiable.</p></div>
+<div class="card"><img src="https://images.pexels.com/photos/190983/pexels-photo-190983.jpeg" alt="Lambersart" loading="lazy"><h3>Lambersart</h3><p>Trajets sécurisés 24h/24.</p></div>
+<div class="card"><img src="https://images.pexels.com/photos/380728/pexels-photo-380728.jpeg" alt="Bondues" loading="lazy"><h3>Bondues</h3><p>Service fiable 24h/24.</p></div>
 </div>
 </section>
 
-<section id="reservation">
+<section class="section" id="reservation">
 <h2>Réserver un taxi</h2>
 <form>
 <input type="text" placeholder="Nom" required>
@@ -104,6 +113,28 @@ Taxi Lille 24 — Service 24h/24 dans la métropole lilloise.
 </footer>
 
 <a class="call-float" href="tel:+33773684588">📞 Appeler</a>
+
+<script>
+// Animation scroll
+function reveal() {
+  const sections = document.querySelectorAll('.section');
+  const cards = document.querySelectorAll('.card');
+  const windowBottom = window.innerHeight + window.scrollY;
+  sections.forEach(sec => {if(sec.offsetTop < windowBottom - 100) sec.classList.add('visible');});
+  cards.forEach(card => {if(card.offsetTop < windowBottom - 100) card.classList.add('visible');});
+}
+window.addEventListener('scroll', reveal);
+window.addEventListener('load', reveal);
+
+// Slider automatique
+const sliderTrack = document.querySelector('.slider-track');
+let index = 0;
+const slides = sliderTrack.children.length;
+setInterval(() => {
+  index = (index + 1) % slides;
+  sliderTrack.style.transform = `translateX(-${index * 100}%)`;
+}, 3000);
+</script>
 
 </body>
 </html>
