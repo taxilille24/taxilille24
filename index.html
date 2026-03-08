@@ -21,7 +21,7 @@ header{display:flex;justify-content:space-between;align-items:center;padding:20p
 header h1{font-weight:700;font-size:28px;}
 header a{color:#ffd700;font-weight:700;font-size:16px;transition:0.3s;}
 header a:hover{color:white;}
-.hero{height:90vh;background:url('images/hero-taxi.jpg') center/cover no-repeat;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;color:white;position:relative;overflow:hidden;}
+.hero{height:90vh;background:url('images/lille-moderne.jpg') center/cover no-repeat;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;color:white;position:relative;overflow:hidden;}
 .hero::after{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.55);}
 .hero-content{position:relative;z-index:1;max-width:900px;transform:translateY(0);transition:transform 0.5s;}
 .hero h2{font-size:48px;font-weight:700;margin-bottom:15px;text-shadow:0 2px 6px rgba(0,0,0,0.6);}
@@ -50,93 +50,63 @@ footer{background:#111;color:white;text-align:center;padding:35px;font-size:15px
 .call-float:hover{background:#e6c000;}
 @media(max-width:768px){.hero h2{font-size:36px;}.hero p{font-size:18px;}}
 </style>
+
 </head>
+
 <body>
 
 <header>
-<h1>Taxi Lille 24</h1>
-<a href="tel:+33773684588">📞 07 73 68 45 88</a>
+  <h1>Taxi Lille 24</h1>
+  <a href="tel:+33773684588">📞 07 73 68 45 88</a>
 </header>
 
 <div class="hero">
-<div class="hero-content">
-<h2>Taxi Lille 24</h2>
-<p>Disponible 24h/24 dans toute la métropole lilloise</p>
-<div class="hero-buttons">
-<a class="call-btn" href="tel:+33773684588">📞 Appeler maintenant</a>
-<a class="book-btn" href="#reservation">🚖 Réserver un taxi</a>
-</div>
-</div>
+  <div class="hero-content">
+    <h2>Taxi Lille 24</h2>
+    <p>Disponible 24h/24 dans toute la métropole lilloise</p>
+    <div class="hero-buttons">
+      <a class="call-btn" href="tel:+33773684588">📞 Appeler maintenant</a>
+      <a class="book-btn" href="#reservation">🚖 Réserver un taxi</a>
+    </div>
+  </div>
 </div>
 
 <section>
-<h2>Services principaux</h2>
-<div class="grid">
-<div class="card">
-<img src="images/gare-flandres.jpg" alt="Taxi Gare Lille Flandres">
-<h3>🚉 Gare Lille Flandres</h3>
-<p>Transfert immédiat depuis la gare vers toute la métropole.</p>
-</div>
-<div class="card">
-<img src="images/gare-europe.jpg" alt="Taxi Gare Lille Europe">
-<h3>🚉 Gare Lille Europe</h3>
-<p>Service rapide depuis la gare internationale TGV/Eurostar/Thalys.</p>
-</div>
-<div class="card">
-<img src="images/aeroport-lesquin.jpg" alt="Taxi Aéroport Lille Lesquin">
-<h3>✈️ Aéroport Lille Lesquin</h3>
-<p>Transferts sûrs et ponctuels vers l’aéroport.</p>
-</div>
-</div>
+  <h2>Services principaux</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="images/gare-flandres.jpg" alt="Taxi Gare Lille Flandres">
+      <h3>🚉 Gare Lille Flandres</h3>
+      <p>Transfert immédiat depuis la gare vers toute la métropole.</p>
+    </div>
+    <div class="card">
+      <img src="images/gare-europe.jpg" alt="Taxi Gare Lille Europe">
+      <h3>🚉 Gare Lille Europe</h3>
+      <p>Service rapide depuis la gare internationale TGV/Eurostar/Thalys.</p>
+    </div>
+    <div class="card">
+      <img src="images/aeroport-lesquin.jpg" alt="Taxi Aéroport Lille Lesquin">
+      <h3>✈️ Aéroport Lille Lesquin</h3>
+      <p>Transferts sûrs et ponctuels vers l’aéroport.</p>
+    </div>
+  </div>
 </section>
 
 <section>
-<h2>Forfaits populaires</h2>
-<div class="grid">
-<div class="card"><h3>🚉 Gare Lille → Aéroport Lille Lesquin</h3><p class="price">35 €</p></div>
-<div class="card"><h3>🛒 Gare Lille → Central Auchan</h3><p class="price">35 €</p></div>
-<div class="card"><h3>🛒 Gare Lille → Siège Castorama Templemars</h3><p class="price">35 €</p></div>
-<div class="card"><h3>🚗 Gare Lille → Roubaix</h3><p class="price">À partir de 35 €</p></div>
-</div>
-<p style="text-align:center;margin-top:20px;">Ces tarifs sont indicatifs pour des trajets courants depuis les gares de Lille.</p>
+  <h2>Forfaits populaires</h2>
+  <div class="grid">
+    <div class="card"><h3>🚉 Gare Lille → Aéroport Lille Lesquin</h3><p class="price">35 €</p></div>
+    <div class="card"><h3>🛒 Gare Lille → Central Auchan</h3><p class="price">35 €</p></div>
+    <div class="card"><h3>🛒 Gare Lille → Siège Castorama Templemars</h3><p class="price">35 €</p></div>
+    <div class="card"><h3>🚗 Gare Lille → Roubaix</h3><p class="price">À partir de 35 €</p></div>
+  </div>
+  <p style="text-align:center;margin-top:20px;">Ces tarifs sont indicatifs pour des trajets courants depuis les gares de Lille.</p>
 </section>
 
 <section>
-<h2>Découvrir Lille</h2>
-<div class="grid">
-<div class="card">
-<img src="images/grand-place.jpg" alt="Grand Place de Lille">
-<h3>📍 Grand Place</h3>
-<p>Cœur historique et lieu très visité du centre-ville de Lille.</p>
-</div>
-<div class="card">
-<img src="images/vieux-lille.jpg" alt="Vieux Lille">
-<h3>📍 Vieux Lille</h3>
-<p>Quartier historique charmant avec ses rues pavées et ambiance typique du Nord.</p>
-</div>
-</div>
-</section>
-
-<section id="reservation">
-<h2>Réservation & Devis rapide</h2>
-<form action="https://formspree.io/f/xnjgndlj" method="POST">
-<input type="text" name="nom" placeholder="Nom et prénom" required>
-<input type="tel" name="telephone" placeholder="Téléphone" required>
-<input type="text" name="depart" placeholder="Adresse de départ">
-<input type="text" name="destination" placeholder="Destination">
-<input type="date" name="date">
-<input type="time" name="heure">
-<textarea name="message" placeholder="Message / détails supplémentaires"></textarea>
-<button type="submit">📩 Envoyer la demande</button>
-</form>
-</section>
-
-<footer>
-<p>Taxi Lille 24 — Métropole lilloise</p>
-<p>📞 07 73 68 45 88</p>
-<p>Disponible 24h/24 pour vos trajets professionnels ou personnels</p>
-</footer>
-
-<a class="call-float" href="tel:+33773684588">📞 Appeler</a>
-</body>
-</html>
+  <h2>Découvrir Lille</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="images/grand-place.jpg" alt="Grand Place de Lille">
+      <h3>📍 Grand Place</h3>
+      <p>Cœur historique et
