@@ -1,219 +1,161 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Taxi Lille 24 | Taxi 24h/24 Métropole Lilloise</title>
-<meta name="description" content="Taxi Lille 24 — Taxi disponible 24h/24 à Lille, gare Lille Flandres, Lille Europe et aéroport Lille Lesquin. Réservation et devis rapide.">
+<meta name="description" content="Taxi Lille 24 — Taxi disponible 24h/24 à Lille, gares Lille Flandres et Lille Europe, Aéroport Lille Lesquin. Réservation et devis rapide.">
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
-body{
-  margin:0;
-  font-family:Montserrat, sans-serif;
-  background:#f6f6f6;
-  color:#222;
-}
-header{
-  background:black;
-  color:white;
-  padding:20px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-header h1{
-  margin:0;
-  font-size:24px;
-}
-.hero{
-  height:500px;
-  background:url("https://images.unsplash.com/photo-1581174082341-db4a0f78beba?crop=entropy&fit=crop&w=1650&q=80") center/cover no-repeat;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  color:white;
-  padding:0 20px;
-}
-.hero h2{
-  font-size:42px;
-  margin:0;
-}
-.hero p{
-  font-size:20px;
-  margin-top:12px;
-}
-.hero-buttons a{
-  text-decoration:none;
-  margin:12px;
-  padding:15px 30px;
-  border-radius:6px;
-  font-weight:bold;
-}
-.call-btn{
-  background:#ffd000;
-  color:black;
-}
-.book-btn{
-  background:white;
-  color:black;
-}
-section{
-  padding:60px 20px;
-  max-width:1100px;
-  margin:auto;
-}
-.services,
-.places{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:25px;
-}
-.card{
-  background:white;
-  padding:30px;
-  border-radius:10px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.1);
-  text-align:center;
-}
-.card img{
-  width:100%;
-  border-radius:8px;
-  margin-bottom:15px;
-}
-form{
-  background:white;
-  padding:30px;
-  border-radius:10px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
-input, textarea{
-  width:100%;
-  padding:12px;
-  margin-bottom:15px;
-  border-radius:6px;
-  border:1px solid #ccc;
-}
-button{
-  background:#ffd000;
-  border:none;
-  padding:15px;
-  font-weight:bold;
-  width:100%;
-  border-radius:6px;
-  cursor:pointer;
-}
-footer{
-  background:black;
-  color:white;
-  text-align:center;
-  padding:30px;
-  margin-top:40px;
-}
-.call-float{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#ffd000;
-  color:black;
-  padding:15px 20px;
-  border-radius:50px;
-  font-weight:bold;
-  text-decoration:none;
-  box-shadow:0 5px 15px rgba(0,0,0,0.3);
-}
+body{margin:0;font-family:Montserrat, sans-serif;background:#f6f6f6;color:#222;}
+header{background:black;color:white;padding:20px;display:flex;justify-content:space-between;align-items:center;}
+header h1{margin:0;font-size:24px;}
+.hero{height:500px;background:url("https://images.unsplash.com/photo-1581174082341-db4a0f78beba?crop=entropy&fit=crop&w=1650&q=80") center/cover no-repeat;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;color:white;padding:0 20px;}
+.hero h2{font-size:42px;margin:0;}
+.hero p{font-size:20px;margin-top:12px;}
+.hero-buttons a{text-decoration:none;margin:12px;padding:15px 30px;border-radius:6px;font-weight:bold;}
+.call-btn{background:#ffd000;color:black;}
+.book-btn{background:white;color:black;}
+section{padding:60px 20px;max-width:1100px;margin:auto;}
+.services,.places,.forfaits{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;}
+.card{background:white;padding:30px;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,0.1);text-align:center;}
+.card img{width:100%;border-radius:8px;margin-bottom:15px;}
+form{background:white;padding:30px;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,0.1);}
+input,textarea{width:100%;padding:12px;margin-bottom:15px;border-radius:6px;border:1px solid #ccc;}
+button{background:#ffd000;border:none;padding:15px;font-weight:bold;width:100%;border-radius:6px;cursor:pointer;}
+footer{background:black;color:white;text-align:center;padding:30px;margin-top:40px;}
+.call-float{position:fixed;bottom:20px;right:20px;background:#ffd000;color:black;padding:15px 20px;border-radius:50px;font-weight:bold;text-decoration:none;box-shadow:0 5px 15px rgba(0,0,0,0.3);}
 </style>
-
 </head>
-
 <body>
 
 <header>
-  <h1>Taxi Lille 24</h1>
-  <a href="tel:+33773684588" style="color:white; text-decoration:none;">📞 07 73 68 45 88</a>
+<h1>Taxi Lille 24</h1>
+<a href="tel:+33773684588" style="color:white; text-decoration:none;">📞 07 73 68 45 88</a>
 </header>
 
 <div class="hero">
-  <h2>Taxi Lille 24</h2>
-  <p>Taxi disponible 24h/24 dans toute la métropole lilloise</p>
-
-  <div class="hero-buttons">
-    <a class="call-btn" href="tel:+33773684588">📞 Appeler maintenant</a>
-    <a class="book-btn" href="#reservation">🚖 Réserver un taxi</a>
-  </div>
+<h2>Taxi Lille 24</h2>
+<p>Taxi disponible 24h/24 dans toute la métropole lilloise</p>
+<div class="hero-buttons">
+<a class="call-btn" href="tel:+33773684588">📞 Appeler maintenant</a>
+<a class="book-btn" href="#reservation">🚖 Réserver un taxi</a>
+</div>
 </div>
 
 <section>
-  <h2>Services principaux</h2>
-  <div class="services">
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1558513519-4818fc04805c?crop=entropy&fit=crop&w=800&q=80" alt="Taxi Gare Lille Flandres">
-      <h3>🚉 Taxi Gare Lille Flandres</h3>
-      <p>Transfert immédiat depuis la gare en plein centre de Lille, vers toute la métropole.</p>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1589391886642-ff5f64bcb6d9?crop=entropy&fit=crop&w=800&q=80" alt="Taxi Gare Lille Europe">
-      <h3>🚉 Taxi Gare Lille Europe</h3>
-      <p>Service rapide depuis la gare internationale TGV/Eurostar/Thalys.</p>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1561839560-3e52e0b27959?crop=entropy&fit=crop&w=800&q=80" alt="Taxi Aéroport Lille Lesquin">
-      <h3>✈️ Taxi Aéroport Lille Lesquin</h3>
-      <p>Transferts sûrs et ponctuels vers et depuis l’aéroport de Lille‑Lesquin.</p>
-    </div>
-
-  </div>
+<h2>Services principaux</h2>
+<div class="services">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1558513519-4818fc04805c?crop=entropy&fit=crop&w=800&q=80" alt="Taxi Gare Lille Flandres">
+<h3>🚉 Taxi Gare Lille Flandres</h3>
+<p>Transfert immédiat depuis la gare en plein centre de Lille, vers toute la métropole.</p>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1589391886642-ff5f64bcb6d9?crop=entropy&fit=crop&w=800&q=80" alt="Taxi Gare Lille Europe">
+<h3>🚉 Taxi Gare Lille Europe</h3>
+<p>Service rapide depuis la gare internationale TGV/Eurostar/Thalys.</p>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1561839560-3e52e0b27959?crop=entropy&fit=crop&w=800&q=80" alt="Taxi Aéroport Lille Lesquin">
+<h3>✈️ Taxi Aéroport Lille Lesquin</h3>
+<p>Transferts sûrs et ponctuels vers et depuis l’aéroport de Lille‑Lesquin.</p>
+</div>
+</div>
 </section>
 
+
 <section>
-  <h2>Lieu emblématique : Grand Place de Lille</h2>
-
-  <div class="places">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1523642595786-8f6db975ce7b?crop=entropy&fit=crop&w=800&q=80" alt="Grand Place de Lille">
-      <h3>📍 Grand Place</h3>
-      <p>Place principale du centre‑ville de Lille, cœur historique et lieu très visité. :contentReference[oaicite:1]{index=1}</p>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1508051123996-69f8caf4891f?crop=entropy&fit=crop&w=800&q=80" alt="Vieux Lille">
-      <h3>📍 Vieux Lille</h3>
-      <p>Quartier historique charmant avec ses rues pavées et ambiance typique du Nord.</p>
-    </div>
+<h2>Forfaits populaires</h2>
+<div class="forfaits">
+  <div class="card">
+    <h3>🚉 Gare Lille → Aéroport Lille Lesquin</h3>
+    <p class="price">35 €</p>
   </div>
+  <div class="card">
+    <h3>🛒 Gare Lille → Central Auchan</h3>
+    <p class="price">35 €</p>
+  </div>
+  <div class="card">
+    <h3>🛒 Gare Lille → Siège Castorama Templemars</h3>
+    <p class="price">35 €</p>
+  </div>
+  <div class="card">
+    <h3>🚗 Gare Lille → Roubaix</h3>
+    <p class="price">À partir de 35 €</p>
+  </div>
+</div>
+<p>Ces tarifs sont indicatifs pour des trajets courants depuis les gares de Lille. Pour toute autre destination, contactez-nous via le formulaire de réservation.</p>
+
+<style>
+.forfaits{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+  margin-top:20px;
+}
+.forfaits .card{
+  background:white;
+  padding:30px;
+  border-radius:12px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.12);
+  text-align:center;
+  transition: transform 0.3s;
+}
+.forfaits .card:hover{
+  transform: translateY(-5px);
+}
+.forfaits .card h3{
+  font-size:18px;
+  margin-bottom:10px;
+}
+.forfaits .card .price{
+  font-size:24px;
+  font-weight:bold;
+  color:#ffd000;
+}
+</style>
+</section>
+
+
+<section>
+<h2>Lieu emblématique : Grand Place de Lille</h2>
+<div class="places">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1523642595786-8f6db975ce7b?crop=entropy&fit=crop&w=800&q=80" alt="Grand Place de Lille">
+<h3>📍 Grand Place</h3>
+<p>Place principale du centre‑ville de Lille, cœur historique et lieu très visité.</p>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1508051123996-69f8caf4891f?crop=entropy&fit=crop&w=800&q=80" alt="Vieux Lille">
+<h3>📍 Vieux Lille</h3>
+<p>Quartier historique charmant avec ses rues pavées et ambiance typique du Nord.</p>
+</div>
+</div>
 </section>
 
 <section id="reservation">
-  <h2>Réservation & Devis rapide</h2>
-  <form action="https://formspree.io/f/xnjgndlj" method="POST">
-
-    <input type="text" name="nom" placeholder="Nom et prénom" required>
-    <input type="tel" name="telephone" placeholder="Téléphone" required>
-    <input type="text" name="depart" placeholder="Adresse de départ">
-    <input type="text" name="destination" placeholder="Destination">
-    <input type="date" name="date">
-    <input type="time" name="heure">
-    <textarea name="message" placeholder="Message / détails supplémentaires"></textarea>
-
-    <button type="submit">📩 Envoyer la demande</button>
-  </form>
+<h2>Réservation & Devis rapide</h2>
+<form action="https://formspree.io/f/xxxxabcd" method="POST">
+<input type="text" name="nom" placeholder="Nom et prénom" required>
+<input type="tel" name="telephone" placeholder="Téléphone" required>
+<input type="text" name="depart" placeholder="Adresse de départ">
+<input type="text" name="destination" placeholder="Destination">
+<input type="date" name="date">
+<input type="time" name="heure">
+<textarea name="message" placeholder="Message / détails supplémentaires"></textarea>
+<button type="submit">📩 Envoyer la demande</button>
+</form>
 </section>
 
 <footer>
-  <p>Taxi Lille 24 — Métropole lilloise</p>
-  <p>📞 07 73 68 45 88</p>
-  <p>Disponible 24h/24 pour vos trajets professionnels ou personnels</p>
+<p>Taxi Lille 24 — Métropole lilloise</p>
+<p>📞 07 73 68 45 88</p>
+<p>Disponible 24h/24 pour vos trajets professionnels ou personnels</p>
 </footer>
 
 <a class="call-float" href="tel:+33773684588">📞 Appeler</a>
-
 </body>
 </html>
