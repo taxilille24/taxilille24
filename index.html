@@ -1,281 +1,140 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>Taxi Lille 24 | Taxi Métropole de Lille 24h/24</title>
-
-<meta name="description" content="Taxi Lille 24 disponible 24h/24. Transferts gares Lille Flandres, Lille Europe, aéroport Lille Lesquin, Roubaix, Tourcoing, Villeneuve d'Ascq. Réservation rapide.">
-
-<meta name="robots" content="index, follow">
-
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-body{
-font-family:Montserrat;
-margin:0;
-background:#f5f5f5;
-color:#111;
-}
-
-header{
-background:#111;
-color:white;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px;
-position:sticky;
-top:0;
-}
-
-header a{
-color:#ffd700;
-font-weight:bold;
-}
-
-.hero{
-height:90vh;
-background:url("https://images.unsplash.com/photo-1517544122544-7fa0a1d6e0b7?crop=entropy&fit=crop&w=1650&q=80") center/cover;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-color:white;
-}
-
-.hero-content{
-background:rgba(0,0,0,0.6);
-padding:40px;
-border-radius:10px;
-}
-
-.btn{
-display:inline-block;
-padding:15px 30px;
-margin:10px;
-border-radius:8px;
-font-weight:bold;
-}
-
-.call{
-background:#ffd700;
-color:#111;
-}
-
-.book{
-background:white;
-}
-
-section{
-padding:70px 20px;
-max-width:1100px;
-margin:auto;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.card{
-background:white;
-padding:25px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-text-align:center;
-}
-
-form{
-background:white;
-padding:30px;
-border-radius:10px;
-}
-
-input,textarea{
-width:100%;
-padding:12px;
-margin-bottom:12px;
-}
-
-button{
-background:#ffd700;
-border:none;
-padding:15px;
-font-weight:bold;
-width:100%;
-}
-
-footer{
-background:#111;
-color:white;
-text-align:center;
-padding:30px;
-}
-
-.call-float{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#ffd700;
-padding:15px 20px;
-border-radius:50px;
-font-weight:bold;
-}
-
-.whatsapp{
-position:fixed;
-bottom:80px;
-right:20px;
-background:#25D366;
-color:white;
-padding:15px;
-border-radius:50px;
-}
-
-</style>
-
-<script type="application/ld+json">
-
-{
-"@context":"https://schema.org",
-"@type":"TaxiService",
-"name":"Taxi Lille 24",
-"areaServed":"Lille",
-"telephone":"+33773684588"
-}
-
-</script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Taxi Lille 24 | Taxi Métropole de Lille 24h/24</title>
+  <meta name="description" content="Taxi Lille 24 disponible 24h/24. Transferts vers gares Lille Flandres, Lille Europe, aéroport Lille Lesquin, Roubaix, Tourcoing, Villeneuve-d'Ascq, Marcq-en-Barœul, Wasquehal, La Madeleine, Lambersart, Bondues. Réservation rapide.">
+  <meta name="keywords" content="taxi lille, taxi lille 24h, taxi gare lille flandres, taxi gare lille europe, taxi aeroport lille lesquin, taxi roubaix, taxi tourcoing, taxi villeneuve d'ascq, taxi marcq en baroeul, taxi wasquehal, taxi la madeleine, taxi lambersart, taxi bondues">
+  <meta name="robots" content="index, follow">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'Montserrat',sans-serif;background:#f5f5f5;color:#111;line-height:1.6;scroll-behavior:smooth;}
+    a{text-decoration:none;color:inherit;}
+    header{display:flex;justify-content:space-between;align-items:center;padding:20px 40px;background:#111;color:white;position:sticky;top:0;z-index:1000;}
+    header h1{font-weight:700;font-size:28px;}
+    header a{color:#ffd700;font-weight:700;}
+    header a:hover{color:white;}
+    .hero{height:90vh;background:url('https://images.unsplash.com/photo-1517544122544-7fa0a1d6e0b7?crop=entropy&fit=crop&w=1650&q=80') center/cover no-repeat;display:flex;align-items:center;justify-content:center;text-align:center;color:white;position:relative;}
+    .hero::after{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.55);}
+    .hero-content{position:relative;z-index:1;max-width:900px;padding:40px;}
+    .hero h2{font-size:48px;font-weight:700;margin-bottom:15px;text-shadow:0 2px 6px rgba(0,0,0,0.6);}
+    .hero p{font-size:22px;margin-bottom:25px;text-shadow:0 1px 4px rgba(0,0,0,0.6);}
+    .hero-buttons a{display:inline-block;margin:10px;padding:15px 35px;border-radius:8px;font-weight:700;transition:0.3s;}
+    .call-btn{background:#ffd700;color:#111;box-shadow:0 4px 10px rgba(255,215,0,0.4);}
+    .call-btn:hover{background:#e6c000;box-shadow:0 6px 15px rgba(255,215,0,0.6);}
+    .book-btn{background:#fff;color:#111;box-shadow:0 4px 10px rgba(0,0,0,0.2);}
+    .book-btn:hover{background:#eee;box-shadow:0 6px 15px rgba(0,0,0,0.3);}
+    section{padding:80px 20px;max-width:1200px;margin:auto;}
+    h2{font-size:32px;font-weight:700;margin-bottom:40px;text-align:center;}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;}
+    .card{background:white;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,0.12);padding:25px;text-align:center;transition: transform 0.3s, box-shadow 0.3s;}
+    .card:hover{transform:translateY(-8px) scale(1.02);box-shadow:0 12px 25px rgba(0,0,0,0.18);}
+    .card img{width:100%;border-radius:10px;margin-bottom:15px;height:180px;object-fit:cover;}
+    form{background:white;padding:35px;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,0.12);}
+    input,textarea{width:100%;padding:14px;margin-bottom:15px;border-radius:8px;border:1px solid #ccc;font-size:16px;}
+    button{width:100%;padding:16px;background:#ffd700;border:none;border-radius:8px;font-weight:700;cursor:pointer;font-size:16px;}
+    button:hover{background:#e6c000;}
+    footer{background:#111;color:white;text-align:center;padding:35px;}
+    .call-float{position:fixed;bottom:20px;right:20px;background:#ffd700;color:#111;padding:16px 22px;border-radius:50px;font-weight:700;box-shadow:0 5px 15px rgba(0,0,0,0.3);}
+    .call-float:hover{background:#e6c000;}
+    @media(max-width:768px){.hero h2{font-size:36px;}.hero p{font-size:18px;}}
+  </style>
 </head>
-
 <body>
 
 <header>
-
-<h1>Taxi Lille 24</h1>
-
-<a href="tel:+33773684588">📞 07 73 68 45 88</a>
-
+  <h1>Taxi Lille 24</h1>
+  <a href="tel:+33773684588">📞 07 73 68 45 88</a>
 </header>
 
 <div class="hero">
-
-<div class="hero-content">
-
-<h2>Taxi Lille 24</h2>
-
-<p>Taxi disponible 24h/24 dans toute la métropole lilloise</p>
-
-<a class="btn call" href="tel:+33773684588">Appeler maintenant</a>
-
-<a class="btn book" href="#reservation">Réserver</a>
-
-</div>
-
+  <div class="hero-content">
+    <h2>Taxi Lille 24</h2>
+    <p>Disponible 24h/24 dans toute la métropole lilloise</p>
+    <div class="hero-buttons">
+      <a class="call-btn" href="tel:+33773684588">📞 Appeler maintenant</a>
+      <a class="book-btn" href="#reservation">🚖 Réserver un taxi</a>
+    </div>
+  </div>
 </div>
 
 <section>
+  <h2>Nos services principaux</h2>
+  <div class="grid">
+    <div class="card"><img src="https://images.unsplash.com/photo-1603052875242-2e64a3bb7b3f?crop=entropy&fit=crop&w=800&q=80" alt="Taxi Gare Lille Flandres"><h3>Taxi Gare Lille Flandres</h3><p>Transfert rapide vers la gare Lille Flandres.</p></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1595003437243-d093fa2f91df?crop=entropy&fit=crop&w=800&q=80" alt="Taxi Gare Lille Europe"><h3>Taxi Gare Lille Europe</h3><p>Service professionnel vers la gare Lille Europe.</p></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1581090700227-8eec8a3c7b3e?crop=entropy&fit=crop&w=800&q=80" alt="Taxi Aéroport Lille Lesquin"><h3>Taxi Aéroport Lille Lesquin</h3><p>Transfert 24h/24 vers l'aéroport de Lille Lesquin.</p></div>
+  </div>
+</section>
 
-<h2>Nos services</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Taxi Gare Lille Flandres</h3>
-<p>Transfert rapide vers la gare.</p>
-</div>
-
-<div class="card">
-<h3>Taxi Gare Lille Europe</h3>
-<p>Service rapide pour vos trains TGV.</p>
-</div>
-
-<div class="card">
-<h3>Taxi Aéroport Lille Lesquin</h3>
-<p>Transfert vers l'aéroport 24h/24.</p>
-</div>
-
-<div class="card">
-<h3>Taxi Métropole Lilloise</h3>
-<p>Roubaix, Tourcoing, Villeneuve d'Ascq.</p>
-</div>
-
-</div>
-
+<!-- Mini-sections pour chaque ville -->
+<section>
+  <h2>Taxi à Roubaix</h2>
+  <p>Taxi Lille 24 dessert Roubaix 24h/24 pour tous vos déplacements : gares, entreprises ou domicile. Trajets rapides et confortables avec chauffeur professionnel.</p>
+  <a class="book-btn" href="#reservation">🚖 Réserver un taxi à Roubaix</a>
 </section>
 
 <section>
-
-<h2>Nos zones de service</h2>
-
-<p>Taxi Lille 24 assure les déplacements dans toute la métropole lilloise.</p>
-
-<ul>
-
-<li><a href="taxi-lille.html">Taxi Lille</a></li>
-<li><a href="taxi-gare-lille.html">Taxi Gare Lille</a></li>
-<li><a href="taxi-aeroport-lille.html">Taxi Aéroport Lille Lesquin</a></li>
-<li><a href="taxi-roubaix.html">Taxi Roubaix</a></li>
-<li><a href="taxi-tourcoing.html">Taxi Tourcoing</a></li>
-
-</ul>
-
+  <h2>Taxi à Tourcoing</h2>
+  <p>Nous assurons vos trajets à Tourcoing à tout moment. Service fiable, ponctuel et sécurisé pour vos besoins professionnels ou privés.</p>
+  <a class="book-btn" href="#reservation">🚖 Réserver un taxi à Tourcoing</a>
 </section>
 
 <section>
+  <h2>Taxi à Villeneuve-d'Ascq</h2>
+  <p>Déplacements rapides à Villeneuve-d'Ascq 24h/24. Chauffeurs expérimentés pour vos trajets gares, aéroport ou ville.</p>
+  <a class="book-btn" href="#reservation">🚖 Réserver un taxi à Villeneuve-d'Ascq</a>
+</section>
 
-<h2>Taxi Lille 24 – Service de transport dans la métropole lilloise</h2>
+<section>
+  <h2>Taxi à Marcq-en-Barœul</h2>
+  <p>Service taxi pour Marcq-en-Barœul disponible à tout moment. Confort, sécurité et rapidité garantis.</p>
+  <a class="book-btn" href="#reservation">🚖 Réserver un taxi à Marcq-en-Barœul</a>
+</section>
 
-<p>
+<section>
+  <h2>Taxi à Wasquehal</h2>
+  <p>Taxi 24h/24 à Wasquehal pour tous vos déplacements personnels ou professionnels. Service fiable et chauffeurs expérimentés.</p>
+  <a class="book-btn" href="#reservation">🚖 Réserver un taxi à Wasquehal</a>
+</section>
 
-Taxi Lille 24 propose un service de transport disponible 24h/24 dans toute la métropole de Lille.
-Nous assurons les trajets vers les gares Lille Flandres et Lille Europe, l'aéroport Lille Lesquin
-ainsi que toutes les communes environnantes comme Roubaix, Tourcoing et Villeneuve d'Ascq.
+<section>
+  <h2>Taxi à La Madeleine</h2>
+  <p>Nous desservons La Madeleine 24h/24 avec un service rapide et confortable. Réservation simple et efficace.</p>
+  <a class="book-btn" href="#reservation">🚖 Réserver un taxi à La Madeleine</a>
+</section>
 
-Notre chauffeur professionnel garantit un trajet confortable, rapide et sécurisé.
+<section>
+  <h2>Taxi à Lambersart</h2>
+  <p>Déplacements sécurisés et rapides à Lambersart avec Taxi Lille 24. Disponible 24h/24 pour toutes vos urgences et trajets planifiés.</p>
+  <a class="book-btn" href="#reservation">🚖 Réserver un taxi à Lambersart</a>
+</section>
 
-</p>
-
+<section>
+  <h2>Taxi à Bondues</h2>
+  <p>Service de taxi fiable à Bondues 24h/24. Pour toutes vos courses locales, gares et aéroport avec chauffeurs professionnels.</p>
+  <a class="book-btn" href="#reservation">🚖 Réserver un taxi à Bondues</a>
 </section>
 
 <section id="reservation">
-
-<h2>Réserver un taxi</h2>
-
-<form>
-
-<input type="text" placeholder="Nom">
-
-<input type="tel" placeholder="Téléphone">
-
-<input type="text" placeholder="Adresse de départ">
-
-<input type="text" placeholder="Destination">
-
-<textarea placeholder="Message"></textarea>
-
-<button>Envoyer la réservation</button>
-
-</form>
-
+  <h2>Réserver un taxi</h2>
+  <form>
+    <input type="text" placeholder="Nom" required>
+    <input type="tel" placeholder="Téléphone" required>
+    <input type="text" placeholder="Adresse de départ" required>
+    <input type="text" placeholder="Destination" required>
+    <textarea placeholder="Message"></textarea>
+    <button>Envoyer la réservation</button>
+  </form>
 </section>
 
 <footer>
-
-Taxi Lille 24 — Service taxi 24h/24 dans la métropole lilloise.
-
+  Taxi Lille 24 — Service de taxi 24h/24 dans la métropole lilloise.
 </footer>
 
 <a class="call-float" href="tel:+33773684588">📞 Appeler</a>
 
-<a class="whatsapp" href="https://wa.me/33773684588">WhatsApp</a>
-
 </body>
-
 </html>
